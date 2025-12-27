@@ -1,0 +1,173 @@
+/* GENERAL */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #ffe6f2;
+  color: #4a4a4a;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+}
+
+/* MUSIC BUTTON */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #ff6fa8;
+  box-shadow: 0 4px 10px rgba(255,112,153,0.3);
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* CARD */
+.message-card {
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(255,112,153,0.25);
+  text-align: center;
+}
+
+/* TEXT */
+h1 {
+  font-size: 42px;
+  color: #ff5c93;
+}
+
+.intro {
+  font-size: 18px;
+  color: #ff83b2;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.closing {
+  font-size: 18px;
+  color: #ff6fa8;
+}
+
+.signature {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #ff6fa8;
+}
+
+/* STORY */
+.story-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #ff6fa8;
+  margin-bottom: 20px;
+}
+
+.story-box {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(255,112,153,0.2);
+  text-align: left;
+}
+
+/* FINAL MESSAGE */
+.final-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.reveal-btn {
+  background: #ff6fa8;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.final-message {
+  display: none;
+  margin-top: 25px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(255,112,153,0.25);
+}
+
+/* DIVIDER */
+.divider {
+  width: 70%;
+  height: 2px;
+  background: rgba(255,180,200,0.5);
+  margin: 50px auto;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #ff6fa8;
+  font-weight: 600;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* HEARTS BACKGROUND */
+.hearts::before,
+.hearts::after {
+  content: "♡";
+  position: fixed;
+  color: rgba(255,140,170,0.6);
+  font-size: 22px;
+  animation: float 6s infinite ease-in-out;
+  bottom: -10%;
+}
+
+.hearts::before { left: 10%; }
+.hearts::after { left: 90%; animation-delay: 2s; }
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: .7; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  h1 { font-size: 32px; }
+  .message-card, .story-box { padding: 24px; }
+}
